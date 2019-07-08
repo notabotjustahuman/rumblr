@@ -34,7 +34,7 @@ end
 
 get '/login' do
   if session[:user_id]
-    redirect '/'
+    redirect '/home'
   else
   erb :'users/login'
   end
