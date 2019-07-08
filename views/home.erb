@@ -1,0 +1,10 @@
+<h1>Welcome to my website</h1>
+<% if session[:user_id] %>
+  <form action="/logout" method="post">
+    <input type="submit" value="log out">
+  </form>
+<% else %>
+<a href="/login">Login</a>
+<a href="/signup">Sign Up</a>
+<% end %>
+<%= session[:user_id] %>
