@@ -1,4 +1,4 @@
-<h1>Welcome to my website</h1>
+<h1>Yeehaw cowboy</h1>
 <% if session[:user_id] %>
   <form action="/logout" method="post">
     <input type="submit" value="log out">
@@ -7,6 +7,3 @@
 <a href="/login">Login</a>
 <a href="/signup">Sign Up</a>
 <% end %>
-<%= session[:user_id] %>
-
-<h1>test</h1>

@@ -34,7 +34,7 @@ end
 
 get '/login' do
   if session[:user_id]
-    redirect '/home'
+    redirect '/'
   else
   erb :'users/login'
   end
@@ -51,6 +51,7 @@ post '/login' do
       p "Invalid email or password"
     end
   end
+  redirect '/'
 end
 
 # delete request
