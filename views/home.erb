@@ -1,9 +1,9 @@
 <h1>Yeehaw cowboy</h1>
 <% if session[:user_id] %>
   <form action="/logout" method="post">
-    <input type="submit" value="log out">
+    <input type="submit" name="submit" value="log out">
   </form>
 <% else %>
-<a href="/login">Login</a>
-<a href="/signup">Sign Up</a>
+  <a href="/login">Login</a>
+  <a href="/signup">Sign Up</a>
 <% end %>
