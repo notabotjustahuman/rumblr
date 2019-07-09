@@ -29,6 +29,7 @@ post '/signup' do
     p "#{@user.first_name} was saved to the database."
     redirect '/thanks'
   end
+  erb :'users/thanks'
 end
 
 get '/thanks' do
