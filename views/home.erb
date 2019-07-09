@@ -3,7 +3,8 @@
   <form action="/logout" method="post">
     <input type="submit" name="submit" value="log out">
   </form>
-<% else %>
+<% end %>
+<% if !session[:user_id] %>
   <a href="/login">Login</a>
   <a href="/signup">Sign Up</a>
 <% end %>
