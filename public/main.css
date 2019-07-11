@@ -1,0 +1,62 @@
+body {
+  background-image: url("https://www.promisesbehavioralhealth.com/wp-content/uploads/2014/12/ranch.jpg");
+  background-size: cover;
+}
+
+#navbar {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #F7AC57;
+  border-radius: 10px;
+  border: 1.5px solid green;
+}
+
+li {
+  justify-content: center;
+  float: right;
+  font-family: 'open sans', sans-serif;
+}
+
+li:last-child {
+  float: left;
+  font-style: italic;
+  font-weight: bold;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  font-size: 22px;
+  padding: 10px 16px;
+}
+
+a:last-child {
+  font-size: 20px;
+}
+
+a:hover {
+  background-color: #D1EAEC;
+  border-radius: 5px;
+}
+
+input {
+  border: none;
+  outline: none;
+  background-color: #F7AC57;
+  font-family: 'open sans', sans-serif;
+  font-size: 20px;
+}
+
+input:hover {
+  background-color: #D1EAEC;
+}

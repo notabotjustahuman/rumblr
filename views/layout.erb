@@ -16,66 +16,10 @@
         <a href="/newsfeed">Newsfeed</a> |
         <a href="/profile">Profile</a> |
         <a href="/about">About</a>
-        <button onclick="document.getElementById('modalLogin').classList.remove('hidden')">Login</button>
-          <div id="modalLogin" class="modalstyling hidden" onclick="document.getElementById('modalLogin').classList.add('hidden')">
-            <div class="test">
-
-            <form class="modalcontent">
-
-              <div class="modalIcon">
-                <span class="close">&times</span>
-                <img src="https://ui-ex.com/images/vector-emoji-cowboy-1.png" class="cowboyicon">
-              </div>
-
-              <div class="userInfo">
-                <label>Email:</label>
-                <input type="email" placeholder="Enter Email" name="email" autofocus required>
-
-                <label>Password:</label>
-                <input type="password" placeholder="Enter Password" name="password" required>
-
-                <button id="modalLoginButton" type="submit">Login</button>
-              </div>
-
-            </form>
-          </div>
-          </div>
-
-          <button onclick="document.getElementById('modalCreate').classList.remove('hidden')">Create Account</button>
-            <div id="modalCreate" class="modalstyling hidden" onclick="document.getElementById('modalCreate').classList.add('hidden')">
-              <form class="modalcontent" action="signup" method="post">
-
-                <div class="modalIcon">
-                  <span class="close">&times</span>
-                  <img src="https://ui-ex.com/images/vector-emoji-cowboy-1.png" class="cowboyicon">
-                </div>
-
-                <div class="userInfo">
-                  <label>First Name:</label>
-                  <input type="text" name="first_name" autofocus required><br>
-
-                  <label>Last Name:</label>
-                  <input type="text" name="last_name" required><br>
-
-                  <label>Birthday:</label>
-                  <input type="date" name="birthday" required><br>
-
-                  <label>Email:</label>
-                  <input type="email" name="email" required><br>
-
-                  <label>Password:</label>
-                  <input type="password" name="password" required><br>
-
-                  <input type="submit" name="" value="submit">
-
-
-                </div>
-
-              </form>
-            </div>
       </nav>
     </div> -->
     <%= yield %>
+
   </body>
   <script src="main.js" charset="utf-8"></script>
 </html>

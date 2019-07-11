@@ -20,33 +20,45 @@ class User < ActiveRecord::Base
 end
 
 get '/' do
-  puts "Running"
   erb :home
 end
 
-get '/signup' do
-  @user = User.new
-  erb :'users/signup'
+# get '/signup' do
+#   @user = User.new
+#   erb :'users/signup'
+# end
+
+
+get '/users/profile' do
+  erb :'/users/profile'
 end
 
 post '/signup' do
   @user = User.new(params)
   if @user.save
     p "#{@user.first_name} was saved to the database."
-    redirect '/thanks'
+    redirect '/thankyou'
   end
-  erb :'users/thanks'
+  erb :thankyou
 end
 
-get '/thanks' do
-  erb :'users/thanks'
+get '/thankyou' do
+  erb :thankyou
+end
+
+get '/stories' do
+  erb :stories
+end
+
+post '/stories' do
+  redirect "/stories"
 end
 
 get '/login' do
   if session[:user_id]
-    redirect '/'
+    redirect '/stories'
   else
-  erb :'users/login'
+  erb :home
   end
 end
 

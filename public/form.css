@@ -19,6 +19,7 @@ h1 {
 	text-align: center;
 	text-shadow: 1px 1px #FFCC4D;
 	margin-bottom: 0;
+	margin-top: 10px;
 }
 
 h2 {
@@ -103,9 +104,9 @@ input {
 	position: relative;
 	overflow: hidden;
 	width: 768px;
-	max-width: 100%;
-	min-height: 480px;
-	margin-top: 22px;
+	max-width: 85%;
+	min-height: 420px;
+	margin-top: 10px;
 }
 
 .form-container {
@@ -242,7 +243,7 @@ footer {
     left: 0;
     right: 0;
     text-align: center;
-    z-index: 999;
+    z-index: 2;
 }
 
 footer p {
