@@ -29,8 +29,8 @@ end
 # end
 
 
-get '/users/profile' do
-  erb :'/users/profile'
+get '/profile' do
+  erb :profile
 end
 
 post '/signup' do
