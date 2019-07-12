@@ -1,4 +1,3 @@
-<!-- <link rel="stylesheet" href="../public/main.css"> -->
 <nav id="navbar">
   <ul>
    <li><a href="#">
@@ -7,8 +6,20 @@
      </form>
        </a></li>
    <li><a href="/about">About</a></li>
-   <li><a href="/users/profile">Profile</a></li>
+   <li><a href="/profile">Profile</a></li>
+   <li><a href="/create">Create</a></li>
    <li><a href="/stories">Stories</a></li>
    <li><a href="#">Cowboys Only</a></li>
  </ul>
 </nav>
+
+<div class="userProfile">
+  <h1>Your Profile</h1>
+  <p>First Name: <%= session[:user].first_name %> </p>
+  <p>Last Name: <%= session[:user].last_name %> </p>
+  <p>Birthday: <%= session[:user].birthday%> </p>
+  <p>Email: <%= session[:user].email %> </p>
+  <form action="/delete" method="post">
+    <button id="deleteButton" type="submit">Delete Account</button>
+  </form>
+</div>

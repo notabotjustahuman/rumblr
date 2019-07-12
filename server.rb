@@ -37,13 +37,9 @@ post '/signup' do
   @user = User.new(params)
   if @user.save
     p "#{@user.first_name} was saved to the database."
-    redirect '/thankyou'
+    session[:user] = @user
+    redirect '/stories'
   end
-  erb :thankyou
-end
-
-get '/thankyou' do
-  erb :thankyou
 end
 
 get '/stories' do
@@ -54,9 +50,17 @@ post '/stories' do
   redirect "/stories"
 end
 
+get '/about' do
+  erb :about
+end
+
+get '/create' do
+  erb :create
+end
+
 get '/login' do
   if session[:user_id]
-    redirect '/stories'
+    # redirect '/stories'
   else
   erb :home
   end
@@ -68,12 +72,12 @@ post '/login' do
   if user
     if user.password == given_password
       p 'User authenticated successfully!'
-      session[:user_id] = user.id
+      session[:user] = user
+      redirect '/stories'
     else
       p "Invalid email or password"
     end
   end
-  redirect '/'
 end
 
 # delete request
@@ -81,4 +85,11 @@ post '/logout' do
   session.clear
   p 'User logged out successfully'
   redirect '/'
+end
+
+post "/delete" do
+  user = User.find_by(id: session[:user])
+  user.destroy
+  session.clear
+  redirect "/"
 end
